@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr" , xml:lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Intradys_demo{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="{% static 'js/jquery-3.4.1.min.js'%}"></script>
+    <script src="{% static 'js/materialize.min.js'%}"></script>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/materialize.min.css'%}">
+    <link href="{% static 'css/toastr.css' %}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper purple darken-1">
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="#!" class="brand-logo center">Intradys_demo</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="container">
+            {% block content %}{% endblock %}
+        </section>
+    </main>
+</body>
+
+</html>
